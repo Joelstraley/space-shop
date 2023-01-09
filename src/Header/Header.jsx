@@ -29,10 +29,14 @@ export default function Header() {
 				<SearchIcon className="header__search--icon" />
 			</div>
 			<div className="header__nav">
-				<div className="nav__item">
-					<span className="nav__item--LineOne">Hello Guest</span>
-					<span className="nav__item--LineTwo">Sign In</span>
-				</div>
+				<Link
+					to="/login"
+					style={{ textDecoration: 'none' }}>
+					<div className="nav__item">
+						<span className="nav__item--LineOne">Hello Guest</span>
+						<span className="nav__item--LineTwo">Sign In</span>
+					</div>
+				</Link>
 				<div className="nav__item">
 					<span className="nav__item--LineOne">Your</span>
 					<span className="nav__item--LineTwo">Shop</span>

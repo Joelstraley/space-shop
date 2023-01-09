@@ -18,10 +18,12 @@ const reducer = (state, action) => {
 				basket: [...state.basket, action.item],
 			}
 		case 'REMOVE_FROM_BASKET':
-			console.log('ID', action.id, 'STATE', state.basket.id)
-			const index = state.basket.id.findIndex((basketItem) => {
-				console.log('basket', basketItem)
-			})
+			console.log('ID', action.id, 'STATE', state)
+			const index = state.basket.findIndex(
+				(basketItem) => basketItem.id === action.id
+			)
+
+			console.log('index', index)
 
 			let newBasket = [...state.basket]
 
